@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "e0e5ef78-cb51-44b0-8b83-3ed4f0a43120",
+		"name": "Devsu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11839601"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Actualizar Atributo de Cliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identification\": \"4564984\",\r\n    \"phone\": \"1651651-5465465\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8080/api/clientes/2",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"password\",\r\n    \"status\": true,\r\n    \"name\": \"John Doe\",\r\n    \"gender\": \"Male\",\r\n    \"age\": 30,\r\n    \"identification\": \"789456132\",\r\n    \"address\": \"123 Main St\",\r\n    \"phone\": \"555-5555\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8080/api/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8080/api/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8080/api/clientes/4",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"a new password\",\r\n    \"status\": true,\r\n    \"name\": \"John Doe\",\r\n    \"gender\": \"Male\",\r\n    \"age\": 30,\r\n    \"identification\": \"abc\",\r\n    \"address\": \"123 Main St\",\r\n    \"phone\": \"555-5555\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8080/api/clientes/6",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8080/api/clientes/7",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Crear Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"accountNumber\": \"0000000\",\r\n    \"balance\": 1000.00,\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"status\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cuenta por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 5,\r\n    \"accountNumber\": \"123456789\",\r\n    \"balance\": 1000.00,\r\n    \"accountType\": \"SAVINGS\",\r\n    \"status\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas/2",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar atributo de cuenta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/cuentas/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Registrar movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 1000.0,\r\n  \"accountNumber\": \"789456123\",\r\n  \"date\": \"2024-06-20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Movimiento por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"date\": \"2024-06-22T20:21:32.816+00:00\",\r\n        \"amount\": 100.0,\r\n        \"accountNumber\": \"789456123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar atributo de movimiento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-06-22T20:21:32.816+00:00\",\r\n    \"amount\": -100.0,\r\n    \"accountNumber\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos/1",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/movimientos/4",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movimientos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Generar reporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:8081/api/reportes?cliente=1&fechaInicio=2024-06-11&fechaFin=2024-06-11",
+							"host": [
+								"{{host}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "cliente",
+									"value": "1"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-06-11"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2024-06-11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
